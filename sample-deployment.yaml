@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: sample-deployment
+  name: sample-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: sample-deployment
+    spec:
+      containers:
+        # 適当にコメントを入れました。Kubernetesはいいぞ！
+      - image: ubuntu:latest
+        name: ubuntu
+        resources: {}
+        status: {}
